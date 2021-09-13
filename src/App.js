@@ -19,6 +19,12 @@ function App() {
             <Route path="/pensiones">
               <Grips></Grips>
             </Route>
+            <Route path="/salud">
+              <Health></Health>
+            </Route>
+            <Route path="/educacion">
+              <Education></Education>
+            </Route>
             </Switch>
           </Router>
         </Fragment>

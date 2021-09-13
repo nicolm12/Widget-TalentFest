@@ -18,8 +18,8 @@ const Grips  = () => {
        valuetwo = {9000000}
        fourParagraph = {"Por enfermedades"}
        valueThree = {13000000000}
-       fiveParagraph = {"Por invalidez"}
-       sixParagraph = {"Este riesgo lo puedes cubrir por solo"}
+       sixParagraph = {"Por invalidez"}
+       sevenParagraph = {"Este riesgo lo puedes cubrir por solo"}
        valueFour = {70000}
        >
        </Form>

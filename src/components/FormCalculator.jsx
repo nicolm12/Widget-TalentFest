@@ -32,12 +32,14 @@ const Form = (props) => {
           <p>{props.fourParagraph}</p>
         </div>
         <div>
-          <h2>{props.valueThree}</h2>
           <p>{props.fiveParagraph}</p>
+          <h2>{props.valueThree}</h2>
+          <p>{props.sixParagraph}</p>
         </div>
         <div>
-          <p>{props.sixParagraph}</p>
+          <p>{props.sevenParagraph}</p>
           <h2>{props.valueFour}</h2>
+          <p>{props.eightParagraph}</p>
         </div>
     </div>
     </>
