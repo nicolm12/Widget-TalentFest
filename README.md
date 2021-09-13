@@ -1,2 +1,2 @@
 # Widget-TalentFest
-widget imbebible que sirve como calculadora o simulador financiero
+widget embebible que sirve como calculadora o simulador financiero
