@@ -1,4 +1,5 @@
 import './App.css'
+import Grips from './components/Grips'
 
 import {
   BrowserRouter as Router,
@@ -15,9 +16,9 @@ function App() {
         <Fragment>
           <Router>
             <Switch>
-              <Route>
-
-              </Route>
+            <Route path="/pensiones">
+              <Grips></Grips>
+            </Route>
             </Switch>
           </Router>
         </Fragment>
