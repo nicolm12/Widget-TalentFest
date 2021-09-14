@@ -2,6 +2,8 @@ import React from 'react';
 import Form from './FormCalculator'
 
 const Health  = () => {
+   
+
     return ( 
        <Form
        title = {"Calcula el valor de un plan de salud" }

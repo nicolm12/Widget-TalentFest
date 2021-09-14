@@ -1,21 +1,37 @@
-import React from 'react'
+import React from 'react' 
 
 
 const Form = (props) => {
+
+  const handleInputChange = (e) => {
+    props.setDatos({
+        ...props.datos,
+        [e.target.name] : e.target.value
+    });
+  };
+
+  const selectChange =(e) => props.setOptionSearchNote(e.target.value)
+
+
+    const handleSubmit = e => {
+      e.preventDefault();
+    };
+
+
     return ( 
     <>
     <div>
         <h2>{props.title}</h2>
-        <form action="#">
-            <label htmlFor="">{props.firstInput}</label>
-            <input type="range" min="-10" max="10" step="0.01"/>
-            <label htmlFor="">{props.secondInput}</label>
-            <select name="cars" id="cars" form="carform">
-                <option value="firstOption">{props.firstOption}</option>
-                <option value="secondOption">{props.secondOption}</option>
+        <form action="#" onSubmit={handleSubmit}>
+          <label htmlFor="">{props.firstInput}</label>
+            <input type="range"  name="rangeOne" min={props.minAge} max={props.maxAge} step={props.stepAge}  onChange={ handleInputChange}/>
+          <label htmlFor="">{props.secondInput}</label>
+            <select id="optionSearch" name="options" value={props.optionSearchNote} onChange={selectChange}>
+              <option value="firstOption">{props.firstOption}</option>
+              <option value="secondOption">{props.secondOption}</option>
             </select>
-            <label htmlFor="">{props.thirdInput}</label>
-            <input type="range" min="-10" max="10" step="0.01"/>
+          <label htmlFor="">{props.thirdInput}</label>
+            <input type="range" min={props.min} max={props.max} step={props.step}   name="rangeTwo" onChange={ handleInputChange}/>
         </form> 
     </div>
 
