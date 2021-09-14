@@ -11,12 +11,10 @@ const Education  = () => {
     }
     const [datos, setDatos] = useState(initialData)  
     const [optionSearchNote, setOptionSearchNote] = useState(""); 
-    console.log(datos)
-    console.log(optionSearchNote)
-   
-     let total = valorTol(datos.rangeOne, optionSearchNote, datos.rangeTwo)
+  
+    let total = valorTol(datos.rangeOne, optionSearchNote, datos.rangeTwo)
 
-     let valorSemestre = valorSem(total)
+    let valorSemestre = valorSem(total)
 
 
     return ( 
