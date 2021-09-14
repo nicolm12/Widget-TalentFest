@@ -1,5 +1,6 @@
 import './App.css'
 import Grips from './components/Grips'
+import View from './components/view';
 
 import {
   BrowserRouter as Router,
@@ -19,6 +20,9 @@ function App() {
             <Route path="/pensiones">
               <Grips></Grips>
             </Route>
+            <Route path="/formulario">
+            <View />
+          </Route>
             </Switch>
           </Router>
         </Fragment>
