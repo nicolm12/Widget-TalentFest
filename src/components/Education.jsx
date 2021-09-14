@@ -1,7 +1,7 @@
 import React from 'react';
 import Form from './FormCalculator'
 import { useState, useEffect} from 'react'; 
-import {valorTol, valorSem, valorMin} from './calculos'
+import {valorTol, valorSem, valorMinMonth, valorMinYear} from './calculos'
 
 
 const Education  = () => {
@@ -10,17 +10,37 @@ const Education  = () => {
         rangeTwo: 50000,
     }
     const [datos, setDatos] = useState(initialData)  
-    const [optionSearchNote, setOptionSearchNote] = useState(""); 
+    const [optionSearchNote, setOptionSearchNote] = useState(null); 
+    const [value, setValue] = useState(100000)
+    
+    console.log(optionSearchNote)
+    
+    const valorMinimo = valorMinMonth(datos.rangeOne, datos.rangeTwo)
+    const valorMinimoAnual = valorMinYear(datos.rangeOne, datos.rangeTwo)
+
+
+    useEffect(() => {
+         if(optionSearchNote === "firstOption"){
+            setValue(valorMinimo)
+         }else{
+            setValue(valorMinimoAnual)
+         }
+       
+    }, [value, setValue])
+
+    
+
+   
+    
+
   
     let total = valorTol(datos.rangeOne, optionSearchNote, datos.rangeTwo)
 
     let valorSemestre = valorSem(total)
 
-    let  valorMinimo = valorMin(datos.rangeOne, optionSearchNote, datos.rangeTwo)
+    
 
-    // useEffect(() => {
-    //    setOptionSearchNote()
-    // }, [Select])
+   
 
     return ( 
        <Form

@@ -3,6 +3,7 @@ import Grips from './components/Grips';
 import Health from './components/Health';
 import Education from './components/Education';
 import View from './components/view';
+import Dashboard from './components/Dashboard';
 
 import {
   BrowserRouter as Router,
@@ -20,16 +21,19 @@ function App() {
           <Router>
             <Switch>
             <Route path="/pensiones">
-              <Grips></Grips>
+              <Grips/>
             </Route>
             <Route path="/salud">
-              <Health></Health>
+              <Health/>
             </Route>
             <Route path="/educacion">
-              <Education></Education>
+              <Education/>
             </Route>
             <Route path="/formulario">
             <View />
+          </Route>
+          <Route path="/dashboard">
+            <Dashboard/>
           </Route>
             </Switch>
           </Router>
