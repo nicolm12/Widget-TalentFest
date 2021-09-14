@@ -36,7 +36,7 @@ const Education  = () => {
   
     let total = valorTol(datos.rangeOne, optionSearchNote, datos.rangeTwo)
 
-    let valorSemestre = valorSem(total)
+    let valorSemestre = valorSem(total);
 
     
 
