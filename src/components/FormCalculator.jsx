@@ -61,6 +61,7 @@ const Form = (props) => {
         </div>
         <div className="result">
           <p>{props.fiveParagraph}</p>
+          <h2>{props.valueThree}</h2>
         </div>
         <div className="result">
           <p>{props.sevenParagraph}</p>
