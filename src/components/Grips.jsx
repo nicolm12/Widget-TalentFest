@@ -1,15 +1,15 @@
 import React from 'react';
 import Form from './FormCalculator'
 
-const Grips  = () => {
-    return ( 
-       <Form
-       title = {"Calcula tu precha pensiónal por incapacidad" }
-       firstInput = {"Tu ingreso actual"}
-       secondInput = {"Tu tipo de salario"}
-       firstOption = {"Integral"}
-       secondOption = {"No integral"}
-       thirdInput = {"Años que has cotizado a pensión"}
+const Grips = () => {
+  return (
+    <Form
+      title={"Calcula tu Brecha Pensiónal por Incapacidad"}
+      firstInput={"Tu ingreso actual"}
+      secondInput={"Tu tipo de salario"}
+      firstOption={"Integral"}
+      secondOption={"No integral"}
+      thirdInput={"Años que has cotizado a pensión"}
 
        firstParagraph = {"Si llegarás a incapacitarte te faltarian"}
        valueOne = {1000000}
@@ -25,5 +25,5 @@ const Grips  = () => {
        </Form>
      );
 }
- 
+
 export default Grips;
