@@ -15,8 +15,8 @@ const valorSem = (valor) => {
 }
 
 const valorMin = (edad, optionTime) => {
-    const n = 18 - edad
-    const i = 0.00165159
+    /*const n = 18 - edad
+    const i = 0.00165159*/
     if(optionTime === "firstOption"){
       
     }

@@ -2,7 +2,7 @@ import './App.css'
 import Grips from './components/Grips';
 import Health from './components/Health';
 import Education from './components/Education';
-
+import View from './components/view';
 
 import {
   BrowserRouter as Router,
@@ -28,6 +28,9 @@ function App() {
             <Route path="/educacion">
               <Education></Education>
             </Route>
+            <Route path="/formulario">
+            <View />
+          </Route>
             </Switch>
           </Router>
         </Fragment>
