@@ -1,6 +1,6 @@
 import React from 'react';
 import Form from './FormCalculator'
-import { useState} from 'react'; 
+import { useState, useEffect} from 'react'; 
 import {valorTol, valorSem, valorMin} from './calculos'
 
 
@@ -18,6 +18,9 @@ const Education  = () => {
 
     let  valorMinimo = valorMin(datos.rangeOne, optionSearchNote, datos.rangeTwo)
 
+    // useEffect(() => {
+    //    setOptionSearchNote()
+    // }, [Select])
 
     return ( 
        <Form

@@ -19,8 +19,12 @@ const valorMin = (edad, optionTime, saving) => {
    const n = 18 - edad
    const i = 0.00165159
    if(optionTime === "firstOption"){
-      let suma = ((Math.pow(1+i), n))-1;
-      let result = parseInt(a * (suma/i))
+      const suma = ((Math.pow(1+i), n*12))-1;
+      const result = parseInt(a * (suma/i))
+      return result
+  }else {
+    const suma = ((Math.pow(1+i), n))-1;
+    const result = parseInt(a * (suma/i))
       return result
   }
 }

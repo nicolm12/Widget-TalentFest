@@ -30,8 +30,8 @@ const Form = (props) => {
             <label htmlFor="">{props.firstInput}</label>
             <img src={information} alt="information" className="information" />
           </div>
-          <h3>898989</h3>
-          <input type="range"  name="rangeOne" min={props.minAge} max={props.maxAge} step={props.stepAge}  onChange={ handleInputChange}/>
+          <h3>{props.datos.rangeOne}</h3>
+          <input type="range" name="rangeOne" min={props.minAge} max={props.maxAge} step={props.stepAge}  onChange={ handleInputChange}/>
           <div className="divInfo">
             <label htmlFor="">{props.secondInput}</label>
             <img src={information} alt="information" className="information" />
@@ -44,8 +44,8 @@ const Form = (props) => {
             <label htmlFor="">{props.thirdInput}</label>
             <img src={information} alt="information" className="information" />
           </div>
-          <h3>15</h3>
-          <input type="range" min={props.min} max={props.max} step={props.step}   name="rangeTwo" onChange={ handleInputChange}/>
+          <h3>{props.datos.rangeTwo}</h3>
+          <input type="range"  name="rangeTwo" min={props.min} max={props.max} step={props.step} onChange={ handleInputChange}/>
         </form>
       </div>
       <div className="results">
