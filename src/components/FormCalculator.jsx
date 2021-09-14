@@ -1,6 +1,7 @@
 import React from 'react'
 import "./components.css"
 import information from "../assets/information.png"
+import { Link } from 'react-router-dom';
 
 
 const Form = (props) => {
@@ -69,7 +70,8 @@ const Form = (props) => {
           <h2>{props.valueFour}</h2>
           <p>{props.eightParagraph}</p>
         </div>
-
+        <Link id="RouterNavLink" to="/formulario">Contactanos </Link>
+        <Link id="RouterNavLink" to="/formulario">Aprende mas</Link>
       </div>
     </div>
   );

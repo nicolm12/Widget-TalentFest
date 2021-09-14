@@ -1,7 +1,7 @@
 import React from 'react';
 import Form from './FormCalculator'
 import { useState} from 'react'; 
-import {valorTol, valorSem} from './calculos'
+import {valorTol, valorSem, valorMin} from './calculos'
 
 
 const Education  = () => {
@@ -15,6 +15,8 @@ const Education  = () => {
     let total = valorTol(datos.rangeOne, optionSearchNote, datos.rangeTwo)
 
     let valorSemestre = valorSem(total)
+
+    let  valorMinimo = valorMin(datos.rangeOne, optionSearchNote, datos.rangeTwo)
 
 
     return ( 
@@ -39,7 +41,7 @@ const Education  = () => {
        valuetwo = {valorSemestre}
        fourParagraph = {"Por mes para ti"}
        fiveParagraph = {"tu ahorro total podría varias desde"}
-       valueThree = {optionSearchNote}
+       valueThree = {valorMinimo}
        sixParagraph = {"En portafolio conservador"}
        sevenParagraph = {"Hasta"}
        valueFour = {70000}

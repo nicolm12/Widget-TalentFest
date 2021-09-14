@@ -14,14 +14,16 @@ const valorSem = (valor) => {
   return valor / 10
 }
 
-const valorMin = (edad, optionTime) => {
-    /*const n = 18 - edad
-    const i = 0.00165159*/
-    if(optionTime === "firstOption"){
-      
-    }
+const valorMin = (edad, optionTime, saving) => {
+   const a = saving 
+   const n = 18 - edad
+   const i = 0.00165159
+   if(optionTime === "firstOption"){
+      let suma = ((Math.pow(1+i), n))-1;
+      let result = parseInt(a * (suma/i))
+      return result
+  }
 }
 
 
-
-export {valorTol, valorSem}
+export {valorTol, valorSem, valorMin}
