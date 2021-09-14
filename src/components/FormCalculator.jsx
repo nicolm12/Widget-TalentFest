@@ -1,10 +1,11 @@
 import React from 'react'
+import "./components.css"
 
 
 const Form = (props) => {
     return ( 
-    <>
-    <div>
+    <div className="container">
+    <div className="form">
         <h2>{props.title}</h2>
         <form action="#">
             <label htmlFor="">{props.firstInput}</label>
@@ -19,28 +20,29 @@ const Form = (props) => {
         </form> 
     </div>
 
-    <div>
-        <div>
+    <div className="results">
+        <div className="result">
           <p>{props.firstParagraph}</p>
           <h2>{props.valueOne}</h2>
           <img src="" alt="" />
           <p>{props.secondParagraph}</p>
         </div>
-        <div>
+        <div  className="result">
           <p>{props.thirdParagraph}</p>
           <h2>{props.valuetwo}</h2>
           <p>{props.fourParagraph}</p>
         </div>
-        <div>
+        <div  className="result">
           <h2>{props.valueThree}</h2>
           <p>{props.fiveParagraph}</p>
         </div>
-        <div>
+        <div  className="result">
           <p>{props.sixParagraph}</p>
           <h2>{props.valueFour}</h2>
         </div>
+       
     </div>
-    </>
+    </div>
      );
 };
  
