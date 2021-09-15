@@ -37,6 +37,7 @@ const Form = (props) => {
             <img src={information} alt="information" className={stylesComponents.information} />
           </div>
           <select id="optionSearch" name="options" value={props.optionSearchNote} onChange={selectChange}>
+              <option value="defaultOption">{props.defaultOption}</option>
               <option value="firstOption">{props.firstOption}</option>
               <option value="secondOption">{props.secondOption}</option>
             </select>         

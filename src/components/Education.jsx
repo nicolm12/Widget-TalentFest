@@ -10,7 +10,7 @@ const Education  = () => {
         rangeTwo: 50000,
     }
     const [datos, setDatos] = useState(initialData)  
-    const [optionSearchNote, setOptionSearchNote] = useState(null); 
+    const [optionSearchNote, setOptionSearchNote] = useState("defaultOption"); 
     const [value, setValue] = useState(100000)
 
 
@@ -47,6 +47,7 @@ const Education  = () => {
        step = {50000}
        firstInput = {"Edad de tu hij@"}
        secondInput = {"¿Cada cuanto quieres ahorrar?"}
+       defaultOption = {"Elige una opcion"}
        firstOption = {"Todos los meses"}
        secondOption = {"En total cada año"}
        thirdInput = {"¿Cuanto quieres ahorrar?"}

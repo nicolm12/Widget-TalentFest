@@ -21,7 +21,6 @@ const FormRegister = (props) => {
                         <select name="gender" id="gender" form="gender" className={styles.input} >
                             <option value="oneOption">{props.oneOption}</option>
                             <option value="twoOption">{props.twoOption}</option>
-                            <option value="threeOption">{props.threeOption}</option>
                         </select>
                         <label>{props.country}</label>
                         <input type="text" name="Text country" className={styles.input}  />
