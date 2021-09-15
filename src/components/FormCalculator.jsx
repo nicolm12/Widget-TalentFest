@@ -8,22 +8,22 @@ const Form = (props) => {
 
   const handleInputChange = (e) => {
     props.setDatos({
-        ...props.datos,
-        [e.target.name] : e.target.value
+      ...props.datos,
+      [e.target.name]: e.target.value
     });
   };
 
-  const selectChange =(e) => props.setOptionSearchNote(e.target.value)
+  const selectChange = (e) => props.setOptionSearchNote(e.target.value)
 
 
-    const handleSubmit = e => {
-      e.preventDefault();
-    };
- 
+  const handleSubmit = e => {
+    e.preventDefault();
+  };
+
 
   return (
     <div className={stylesComponents.container}>
-      <div  className={stylesComponents.wrapper}>
+      <div className={stylesComponents.wrapper}>
         <h2>{props.title}</h2>
         <form action="#" className={stylesComponents.form} onSubmit={handleSubmit}>
           <div className={stylesComponents.divInfo}>
@@ -31,22 +31,22 @@ const Form = (props) => {
             <img src={information} alt="information" className={stylesComponents.information} />
           </div>
           <h3>{props.datos.rangeOne}</h3>
-          <input type="range" name="rangeOne" min={props.minAge} max={props.maxAge} step={props.stepAge}  onChange={ handleInputChange}/>
+          <input type="range" name="rangeOne" min={props.minAge} max={props.maxAge} step={props.stepAge} onChange={handleInputChange} />
           <div className={stylesComponents.divInfo}>
             <label htmlFor="">{props.secondInput}</label>
             <img src={information} alt="information" className={stylesComponents.information} />
           </div>
           <select id="optionSearch" name="options" value={props.optionSearchNote} onChange={selectChange}>
-              <option value="defaultOption">{props.defaultOption}</option>
-              <option value="firstOption">{props.firstOption}</option>
-              <option value="secondOption">{props.secondOption}</option>
-            </select>         
+            <option value="defaultOption">{props.defaultOption}</option>
+            <option value="firstOption">{props.firstOption}</option>
+            <option value="secondOption">{props.secondOption}</option>
+          </select>
           <div className={stylesComponents.divInfo}>
             <label htmlFor="">{props.thirdInput}</label>
             <img src={information} alt="information" className={stylesComponents.information} />
           </div>
           <h3>{props.datos.rangeTwo}</h3>
-          <input type="range"  name="rangeTwo" min={props.min} max={props.max} step={props.step} onChange={ handleInputChange}/>
+          <input type="range" name="rangeTwo" min={props.min} max={props.max} step={props.step} onChange={handleInputChange} />
         </form>
       </div>
       <div className={stylesComponents.results}>
