@@ -12,33 +12,30 @@ const Education  = () => {
     const [datos, setDatos] = useState(initialData)  
     const [optionSearchNote, setOptionSearchNote] = useState(null); 
     const [value, setValue] = useState(100000)
-    
-    console.log(optionSearchNote)
-    
-    const valorMinimo = valorMinMonth(datos.rangeOne, datos.rangeTwo)
-    const valorMinimoAnual = valorMinYear(datos.rangeOne, datos.rangeTwo)
 
 
     useEffect(() => {
+        const valorMinimo = valorMinMonth(datos.rangeOne, datos.rangeTwo)
+        const valorMinimoAnual = valorMinYear(datos.rangeOne, datos.rangeTwo)
+
          if(optionSearchNote === "firstOption"){
             setValue(valorMinimo)
          }else{
             setValue(valorMinimoAnual)
          }
        
-    }, [value, setValue])
+    }, [optionSearchNote, setValue])
 
     
-
-   
-    
-
   
+
+
     let total = valorTol(datos.rangeOne, optionSearchNote, datos.rangeTwo)
+    console.log(optionSearchNote)
 
     let valorSemestre = valorSem(total);
 
-    
+
 
    
 
@@ -58,13 +55,13 @@ const Education  = () => {
        stepAge = {1}
 
        firstParagraph = {"Cuando tu hijo se gradúe podrás tener ahorrado:"}
-       valueOne = {total}
+    valueOne = {total}
        secondParagraph = {"Para su eduacación superior"}
        thirdParagraph = {"Con este ahorro podrías pagar semestres de hasta"}
-       valuetwo = {valorSemestre}
+    valuetwo = {valorSemestre}
        fourParagraph = {"Por mes para ti"}
        fiveParagraph = {"tu ahorro total podría varias desde"}
-       valueThree = {valorMinimo}
+    valueThree = {value}
        sixParagraph = {"En portafolio conservador"}
        sevenParagraph = {"Hasta"}
        valueFour = {70000}
