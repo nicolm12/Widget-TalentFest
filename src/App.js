@@ -3,6 +3,7 @@ import Grips from './components/Grips';
 import Health from './components/Health';
 import Education from './components/Education';
 import View from './components/view';
+import FormLogin from './components/FormLogin';
 
 import {
   BrowserRouter as Router,
@@ -30,6 +31,9 @@ function App() {
             </Route>
             <Route path="/formulario">
             <View />
+            </Route>
+            <Route path="/login">
+            <FormLogin titleLogin={"Ingresa a tu cuenta"}/>
           </Route>
             </Switch>
           </Router>
