@@ -2,8 +2,8 @@ import './App.css'
 import Grips from './components/Grips';
 import Health from './components/Health';
 import Education from './components/Education';
-import View from './components/view';
-import FormLogin from './components/FormLogin';
+//import View from './components/view';
+
 
 import {
   BrowserRouter as Router,
@@ -11,6 +11,7 @@ import {
   Route
 } from "react-router-dom";
 import { Fragment } from 'react';
+import Login from './components/FormLogin';
 
 
 function App() {
@@ -30,11 +31,8 @@ function App() {
               <Education></Education>
             </Route>
             <Route path="/formulario">
-            <View />
+            <Login />
             </Route>
-            <Route path="/login">
-            <FormLogin titleLogin={"Ingresa a tu cuenta"}/>
-          </Route>
             </Switch>
           </Router>
         </Fragment>
