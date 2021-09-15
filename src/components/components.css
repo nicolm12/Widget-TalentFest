@@ -1,0 +1,41 @@
+.container{
+    background-color: #d9cfff;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+}
+.divInfo{
+    display: flex;
+    justify-content: space-between;
+}
+.information{
+    width: 15px;
+}
+.results{
+    background-color: white;
+    border-radius: 25px;
+    display: grid;
+    grid-template-rows: repeat(4,1fr);
+    margin: 20px;
+}
+.result {
+    display:block;
+    border-bottom:2px #d9cfff solid ;
+    margin-left:20px;
+    margin-right: 20px;
+}
+.result p{
+    font-size: small;
+}
+.result h2{
+    font-size: smaller;
+}

@@ -4,7 +4,7 @@ import Form from './FormCalculator'
 const Grips = () => {
   return (
     <Form
-      title={"Calcula tu precha pensiónal por incapacidad"}
+      title={"Calcula tu Brecha Pensiónal por Incapacidad"}
       firstInput={"Tu ingreso actual"}
       secondInput={"Tu tipo de salario"}
       firstOption={"Integral"}
