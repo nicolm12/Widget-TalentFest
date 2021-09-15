@@ -26,7 +26,7 @@ const Education  = () => {
             setValue(valorMinimoAnual)
          }
        
-    }, [value, setValue])
+    }, [datos,optionSearchNote, setValue])
 
     
 
@@ -64,7 +64,7 @@ const Education  = () => {
        valuetwo = {valorSemestre}
        fourParagraph = {"Por mes para ti"}
        fiveParagraph = {"tu ahorro total podría varias desde"}
-       valueThree = {valorMinimo}
+       valueThree = {value}
        sixParagraph = {"En portafolio conservador"}
        sevenParagraph = {"Hasta"}
        valueFour = {70000}
