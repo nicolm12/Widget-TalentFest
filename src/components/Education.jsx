@@ -26,7 +26,8 @@ const Education  = () => {
             setValue(valorMinimoAnual)
          }
        
-    }, [datos,optionSearchNote, setValue])
+    }, [datos,optionSearchNote, setValue]);
+    
 
     
 

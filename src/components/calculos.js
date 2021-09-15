@@ -13,20 +13,24 @@ const valorTol = (edad, optionTime, saving) => {
 const valorSem = (valor) => {
   return valor / 10
 };
-const valorMin = (edad, optionTime,monthlySavings) => {
-    const n = 18 - edad
-    const i = 0.00165159
-    let A= monthlySavings;
 
-    if(optionTime === "firstOption"){
 
-      let suma= (Math.pow((1 + i), n))-1;
-      let result = A*(suma/i)
-      return parseInt(result);
-      
-    }
+const valorMinMonth = (edad, saving) => {
+  const n = 18 - edad
+  const i = 0.00165159
+  const suma = ((Math.pow(1+i), n*12))-1;
+  const result = parseInt(saving * (suma/i))
+   return result
+}
+
+const valorMinYear = (edad, saving) => {
+const n = 18 - edad
+const i = 0.00165159
+const suma = ((Math.pow(1+i), n))-1;
+const result = parseInt(saving * (suma/i))
+ return result
 }
 
 
+export {valorTol, valorSem, valorMinMonth, valorMinYear}
 
-export {valorTol, valorSem, valorMin}
