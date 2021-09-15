@@ -10,36 +10,32 @@ const Education  = () => {
         rangeTwo: 50000,
     }
     const [datos, setDatos] = useState(initialData)  
-    const [optionSearchNote, setOptionSearchNote] = useState(null); 
+    const [optionSearchNote, setOptionSearchNote] = useState("defaultOption"); 
     const [value, setValue] = useState(100000)
-    
-    console.log(optionSearchNote)
-    
-    const valorMinimo = valorMinMonth(datos.rangeOne, datos.rangeTwo)
-    const valorMinimoAnual = valorMinYear(datos.rangeOne, datos.rangeTwo)
 
 
     useEffect(() => {
+        const valorMinimo = valorMinMonth(datos.rangeOne, datos.rangeTwo)
+        const valorMinimoAnual = valorMinYear(datos.rangeOne, datos.rangeTwo)
+
          if(optionSearchNote === "firstOption"){
             setValue(valorMinimo)
          }else{
             setValue(valorMinimoAnual)
          }
        
-    }, [datos,optionSearchNote, setValue]);
-    
+    }, [datos,optionSearchNote, setValue])
 
     
-
-   
-    
-
   
+
+
     let total = valorTol(datos.rangeOne, optionSearchNote, datos.rangeTwo)
+    console.log(optionSearchNote)
 
     let valorSemestre = valorSem(total);
 
-    
+
 
    
 
@@ -51,6 +47,7 @@ const Education  = () => {
        step = {50000}
        firstInput = {"Edad de tu hij@"}
        secondInput = {"¿Cada cuanto quieres ahorrar?"}
+       defaultOption = {"Elige una opcion"}
        firstOption = {"Todos los meses"}
        secondOption = {"En total cada año"}
        thirdInput = {"¿Cuanto quieres ahorrar?"}
@@ -59,13 +56,13 @@ const Education  = () => {
        stepAge = {1}
 
        firstParagraph = {"Cuando tu hijo se gradúe podrás tener ahorrado:"}
-       valueOne = {total}
+    valueOne = {total}
        secondParagraph = {"Para su eduacación superior"}
        thirdParagraph = {"Con este ahorro podrías pagar semestres de hasta"}
-       valuetwo = {valorSemestre}
+    valuetwo = {valorSemestre}
        fourParagraph = {"Por mes para ti"}
        fiveParagraph = {"tu ahorro total podría varias desde"}
-       valueThree = {value}
+    valueThree = {value}
        sixParagraph = {"En portafolio conservador"}
        sevenParagraph = {"Hasta"}
        valueFour = {70000}
