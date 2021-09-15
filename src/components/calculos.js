@@ -1,18 +1,29 @@
 // education 
 
+function moneda(value) {
+  const formatterPeso = new Intl.NumberFormat('es-CO', {
+    style: 'currency',
+    currency: 'COP',
+    minimumFractionDigits: 0
+  })
+  const pesos = formatterPeso.format(value)
+  return pesos
+}
+
 const valorTol = (edad, optionTime, saving) => {
   let a = 18 - edad
   let b = saving * a
   if (optionTime === "firstOption") {
-    return b * 12
+    return moneda(b * 12)
   } else {
-    return b
+    return moneda(b)
   }
 };
 
 const valorSem = (valor) => {
-  return valor / 10
+  return (valor / 10)
 }
+
 
 
 const valorMinMonth = (edad, saving) => {
@@ -23,7 +34,7 @@ const valorMinMonth = (edad, saving) => {
   const resta = suma - 1
   const result = parseInt((saving * (resta / i)) - (saving * edad * 12))
   console.log(resta, 'result')
-  return result
+  return moneda(result)
 }
 
 const valorMinYear = (edad, saving) => {
@@ -31,18 +42,22 @@ const valorMinYear = (edad, saving) => {
   const i = 0.002
   const suma = ((Math.pow(1 + i), n)) - 1;
   const result = parseInt((saving * (suma / i)) - (saving * edad))
-  return result
+  return moneda(result)
 }
 
 const valorMaxMes = (edad, saving) => {
-  const n = 18 - edad
+  const n = (18 - edad) * 12
   const i = 0.00565414539
-  const suma = ((Math.pow((1 + i), (n * 12))) - 1)
+  const suma = ((Math.pow((1 + i), (n))) - 1)
   const division = suma / i
   const producto = saving * division
-  const result = producto - (saving * edad * 12)
-  return parseInt(result)
-
+  const result = producto - (saving * n)
+  parseInt(result)
+  const value = parseInt(result)
+  const formatterPeso = moneda(value)
+  return formatterPeso
 }
+
+// → $ 12.500
 
 export { valorTol, valorSem, valorMinMonth, valorMinYear, valorMaxMes }
