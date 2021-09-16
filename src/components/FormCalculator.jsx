@@ -2,7 +2,8 @@ import React from 'react'
 import stylesComponents from '../CSS/components.module.css'
 import information from "../assets/information.png"
 import { Link } from 'react-router-dom';
-import { moneda, valorMaxAño } from './calculos';
+import { moneda } from './calculos';
+import figuro from '../assets/figuroLogo.png'
 
 
 const Form = (props) => {
@@ -20,14 +21,6 @@ const Form = (props) => {
   const handleSubmit = e => {
     e.preventDefault();
   };
-  // function noText(value) {
-  //   if (isNaN(moneda(value))) {
-  //     console.log('ingresa un valor')
-  //   } else {
-  //     moneda(value)
-  //   }
-  // }
-
 
   return (
     <div className={stylesComponents.container}>
@@ -81,12 +74,17 @@ const Form = (props) => {
           <h2>{moneda(props.valueFour)}</h2>
           <p>{props.eightParagraph}</p>
         </div>
-        <div>
-          <Link id="RouterNavLink" to="/formulario">Contactanos </Link>
+        <div className={stylesComponents.divButtons}>
+          <button id='whatsapp' className={`${stylesComponents.btnGeneral} ${stylesComponents.color}`} onClick={props.onClick}>
+            <Link to={props.url} className={stylesComponents.white}>Contactanos</Link>
+          </button>
+          <button id='masInfo' className={stylesComponents.btnGeneral} onClick={props.onClick}>
+            <Link to={props.url}>Mas informacion</Link>
+          </button>
         </div>
-        <div>
-          <Link id="RouterNavLink" to="/formulario">Aprende mas</Link>
-        </div>
+      </div>
+      <div>
+        <img src={figuro} alt="" />
       </div>
     </div >
   );

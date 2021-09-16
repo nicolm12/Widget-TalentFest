@@ -24,7 +24,7 @@ const Education = () => {
         } else if (optionSearchNote === "secondOption") {
             setValue(valorMinimoAnual)
         } else {
-            setValue('no has indicado rango')
+            setValue(0)
         }
 
     }, [datos, optionSearchNote, setValue])
