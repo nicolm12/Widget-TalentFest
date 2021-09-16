@@ -29,10 +29,6 @@ const Grips = () => {
 
 
 
-
-
-
-
   return (
     <Form
       title={"Calcula tu Brecha Pensiónal por Incapacidad"}      
@@ -53,7 +49,7 @@ const Grips = () => {
       step = {1}
 
       firstParagraph={"Si llegarás a incapacitarte te faltarían"}
-      valueOne={pensionalGap + "/ mes"}
+      valueOne={pensionalGap}
       secondParagraph={"Todos los meses para mantener tu estándar de vida actual"}
       thirdParagraph={"Tu valor ideal de aseguramiento sería"}
       valuetwo={minCoverage}
@@ -61,7 +57,7 @@ const Grips = () => {
       valueThree={minCoverAccident}
       sixParagraph={"Por invalidez"}
       sevenParagraph={"Este riesgo lo puedes cubrir por solo"}
-      valueFour={secureRiskMin  + "/ mes"}
+      valueFour={secureRiskMin}
       datos = {datosSlider}
       setDatos = {setDatosSlider}
       setOptionSearchNote = {setOptionSearch}

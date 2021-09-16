@@ -37,5 +37,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/nicolm12/Widget-TalentFest.git",
+  "author": "nicol <nicolmadero12@gmaicom>",
+  "license": "MIT"
 }
