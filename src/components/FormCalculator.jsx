@@ -74,10 +74,12 @@ const Form = (props) => {
         <div className={stylesComponents.result}>
           <p className={stylesComponents.parrafo1}>{props.fiveParagraph}</p>
           <h2>{moneda(props.valueThree)}</h2>
+          <p>{props.sixParagraph}</p>
         </div>
         <div className={stylesComponents.result}>
           <p className={stylesComponents.parrafo1}>{props.sevenParagraph}</p>
           <h2>{moneda(props.valueFour)}</h2>
+          <p>{props.eightParagraph}</p>
         </div>
         <div>
           <Link id="RouterNavLink" to="/formulario">Contactanos </Link>

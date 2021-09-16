@@ -1,4 +1,4 @@
-const rates = [
+export default
   {
     pensionalGap: [
       {
@@ -60,6 +60,179 @@ const rates = [
         id: 13,
         age: 27,
         rate: 75,
+      },
+    ],
+
+    factorYears: [
+      {
+        id: 1,
+        year: 21,
+        factor: 0.468
+      },
+      {
+        id: 2,
+        year: 22,
+        factor: 0.53
+      },
+      {
+        id: 3,
+        year: 23,
+        factor: 0.595
+      },
+      {
+        id: 4,
+        year: 24,
+        factor: 0.666
+      },
+      {
+        id: 5,
+        year: 25,
+        factor: 0.742
+      },
+      {
+        id: 6,
+        year: 26,
+        factor: 0.824
+      },
+      {
+        id: 7,
+        year: 27,
+        factor: 0.912
+      },
+      {
+        id: 9,
+        year: 28,
+        factor: 1.007
+      },
+      {
+        id: 10,
+        year: 29,
+        factor: 1.108
+      },
+      {
+        id: 11,
+        year: 30,
+        factor: 1.217
+      },
+      {
+        id: 12,
+        year: 31,
+        factor: 1.334
+      },
+      {
+        id: 13,
+        year: 32,
+        factor: 1.46
+      },
+      {
+        id: 14,
+        year: 33,
+        factor: 1.596
+      },
+      {
+        id: 15,
+        year: 34,
+        factor: 1.741
+      },
+      {
+        id: 16,
+        year: 35,
+        factor: 1.898
+      },
+      {
+        id: 17,
+        year: 36,
+        factor: 2.066
+      },
+      {
+        id: 18,
+        year: 37,
+        factor: 2.246
+      },
+      {
+        id: 19,
+        year: 38,
+        factor: 2.44
+      },
+      {
+        id: 20,
+        year: 39,
+        factor: 2.649
+      },
+      {
+        id: 21,
+        year: 40,
+        factor: 2.873
+      },
+      {
+        id: 22,
+        year: 41,
+        factor: 3.114
+      },
+      {
+        id: 23,
+        year: 42,
+        factor: 3.373
+      },
+      {
+        id: 24,
+        year: 42,
+        factor: 3.626
+      },
+      {
+        id: 25,
+        year: 44,
+        factor: 3.791
+      },
+      {
+        id: 26,
+        year: 45,
+        factor: 3.971
+      },
+      {
+        id: 27,
+        year: 46,
+        factor: 4.168
+      },
+      {
+        id: 28,
+        year: 47,
+        factor: 4.382
+      },
+      {
+        id: 29,
+        year: 48,
+        factor: 4.617
+      },
+      {
+        id: 30,
+        year: 49,
+        factor: 4.876
+      },
+      {
+        id: 31,
+        year: 50,
+        factor: 5.154
+      },
+      {
+        id: 32,
+        year: 51,
+        factor: 5.364
+      },
+      {
+        id: 33,
+        year: 52,
+        factor: 5.644
+      },
+      {
+        id: 34,
+        year: 53,
+        factor: 6.004
+      },
+      {
+        id: 35,
+        year: 54,
+        factor: 9
       },
     ],
 
@@ -333,5 +506,4 @@ const rates = [
         valuePerMonth: 514157,
       },
     ],
-  },
-];
+  };

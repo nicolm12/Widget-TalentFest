@@ -1,5 +1,5 @@
 import './App.css'
-import Grips from './components/Grips';
+import Grips from './components/Pension';
 import Health from './components/Health';
 import Education from './components/Education';
 import View from './components/view';
