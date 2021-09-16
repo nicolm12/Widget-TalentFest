@@ -58,10 +58,10 @@ const Education  = () => {
        firstParagraph = {"Cuando tu hijo se gradúe podrás tener ahorrado:"}
     valueOne = {total}
        secondParagraph = {"Para su eduacación superior"}
-       thirdParagraph = {"Con este ahorro podrías pagar semestres de hasta"}
+       thirdParagraph = {"Con este ahorro podrías pagar semestres de hasta:"}
     valuetwo = {valorSemestre}
        fourParagraph = {"Por mes para ti"}
-       fiveParagraph = {"tu ahorro total podría varias desde"}
+       fiveParagraph = {"tu ahorro total podría varias desde:"}
     valueThree = {value}
        sixParagraph = {"En portafolio conservador"}
        sevenParagraph = {"Hasta"}

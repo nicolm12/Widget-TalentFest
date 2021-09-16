@@ -64,10 +64,12 @@ const Form = (props) => {
         <div className={stylesComponents.result}>
           <p>{props.fiveParagraph}</p>
           <h2>{props.valueThree}</h2>
+          <p>{props.sixParagraph}</p>
         </div>
         <div className={stylesComponents.result}>
           <p>{props.sevenParagraph}</p>
           <h2>{props.valueFour}</h2>
+          <p>{props.eightParagraph}</p>
         </div>
         <Link id="RouterNavLink" to="/formulario">Contactanos </Link>
         <Link id="RouterNavLink" to="/formulario">Aprende mas</Link>
