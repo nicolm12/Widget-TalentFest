@@ -1,22 +1,12 @@
 import React from 'react';
 import styles from '../CSS/form.module.css'
 import Figuro from "../assets/Figuro Transparente.png"
-//import { useState } from "react";
 
-const FormRegister = (props) => {
+const RegistroForm = (props) => {
 
-    /*const [data, setData] = useState({
-        name: '',
-        lasName: '',
-        gender: '',
-        country: '',
-        email: '',
-        password: '',
-        
-    })*/
     const {
-        Uname,
-        setName,
+        nameN,
+        setNameN,
         lasName,
         setlasName,
         gender,
@@ -32,18 +22,17 @@ const FormRegister = (props) => {
 
     } = props
 
-    const nameChange = (e) => setName(e.target.value);
-    const lasNameChange = (e) => setlasName(e.target.value)
+    const nameChange = (e) => setNameN(e.target.value);
+    const lasNameChange = (e) => setlasName(e.target.value);
     const genderChange = (e) => setGender(e.target.value);
-    const countryChange = (e) => setCountry(e.target.value)
+    const countryChange = (e) => setCountry(e.target.value);
     const emailChange = (e) => setEmail(e.target.value);
     const passwordChange = (e) => setPassword(e.target.value)
 
-   /* const enviarDatos = (event) => {
-        
-        event.preventDefault();
+/* const enviarDatos = (event) => {
 
-    }*/
+event.preventDefault();
+}*/
 
     return (
         <>
@@ -54,7 +43,7 @@ const FormRegister = (props) => {
                     <p>{props.texparrafo}</p>
                     <form className={styles.formLogin} >
                         <label className={styles.tex}>{props.texname}</label>
-                        <input type="tex" name="name" className={styles.input} value={Uname} onChange={nameChange}/>
+                        <input type="tex" name="name" className={styles.input} value={nameN} placeholder="name" onChange={nameChange} />
                         <label>{props.texLastName}</label>
                         <input type="text" name="lasName" className={styles.input} placeholder="Apellido" required value={lasName} onChange={lasNameChange} />
                         <label>{props.texgender}</label>
@@ -75,4 +64,4 @@ const FormRegister = (props) => {
     );
 };
 
-export { FormRegister };
+export { RegistroForm };

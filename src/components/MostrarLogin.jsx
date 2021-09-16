@@ -1,12 +1,12 @@
 import React from 'react';
-import "./formlogin.css";
-import { authListener, createUser } from './firebaseAuth';
-import { useEffect, useState } from 'react';
-import { FormRegister } from './FormRegister'
+import { createUser, authListener} from './firebaseAuth';
+import { useState, useEffect } from 'react';
+import {  RegistroForm } from "./Registroform";
+import {withRouter } from "react-router-dom"
 
-const Login = () => {
+const MostrarLogin = () => {
 
-    const [name, setName] = useState("");
+    const [nameN, setNameN] = useState("");
     const [lasName, setlasName] = useState("");
     const [gender, setGender] = useState("");
     const [country, setCountry] = useState("");
@@ -16,7 +16,7 @@ const Login = () => {
     const [passwordError, setPasswordError] = useState("")
 
     const clearInputs = () => {
-        setName('');
+        setNameN('');
         setlasName('');
         setGender('');
         setCountry('');
@@ -24,18 +24,10 @@ const Login = () => {
         setPassword('');
     }
 
-    const clearErrors = () => {
-        setEmailError('');
-        setPasswordError('');
-    }
-
-    const handleSignup2 = (e) => {
+    const handleSignup = (e) => {
         e.preventDefault()
-        clearErrors();
-        console.log('funciono')
         
         createUser(email, password)
-        .then (res => console.log(res))
                 .catch(err => {
                 switch (err.code) {
                     case "auth/email-already-in-use":
@@ -53,26 +45,26 @@ const Login = () => {
     }
 
     const listenerAuth = () => {
-        authListener((name) => {
-            if (name) {
+        authListener((user) => {
+            if(user){
                 clearInputs();
-                setName(name);
+                setEmail(user);
             } else {
-                setName("");
-            }
-        })
+                setEmail("");
     }
-
+})
+}
+    
     useEffect(() => {
-        listenerAuth();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
+    listenerAuth();
+        }, [])
+    
 
     return (
         <div>
             {
-                    <FormRegister
-                    
+                    < RegistroForm
+
                         textitle={'Crea tu cuenta'}
                         texparrafo={'Al crear tu cuenta asegurate de que tu contraseña tenga al menos una mayuscula, numero  o caracter especial'}
                         texname={'Tu Nombre'}
@@ -84,8 +76,8 @@ const Login = () => {
                         texterminos={'He leído y estoy de acuerdo con los Términos del Servicio'}
                         privacidad={'Este sitio recoge nombres, correos electronicos y otra informacion del usuario. Aceptolos terminos establecidos en la politicas de privacidad'}
                         btn={'registrarme'}
-                        name={name}
-                        setName={setName}
+                        name={nameN}
+                        setName={setNameN}
                         lasName={lasName}
                         setlasName={setlasName}
                         gender={gender}
@@ -96,8 +88,7 @@ const Login = () => {
                         setCountry={setCountry}
                         password={password}
                         setPassword={setPassword}
-                        // handleLogin={handleLogin}
-                        handleSignup={handleSignup2}
+                        handleSignup={handleSignup}
                         emailError={emailError}
                         passwordError={passwordError}
                     />
@@ -105,6 +96,4 @@ const Login = () => {
         </div>
     )
 }
-
-
-export default Login;
+export { MostrarLogin } ;
