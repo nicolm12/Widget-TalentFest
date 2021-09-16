@@ -74,6 +74,7 @@ const Education = () => {
             datos={datos}
             setDatos={setDatos}
             setOptionSearchNote={setOptionSearchNote}
+            urlWsp={'https://wa.link/2f0hes'}
         >
         </Form>
     );

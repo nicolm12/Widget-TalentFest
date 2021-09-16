@@ -71,19 +71,19 @@ const Form = (props) => {
         </div>
         <div className={stylesComponents.result}>
           <p className={stylesComponents.parrafo1}>{props.sevenParagraph}</p>
-          <h2>{moneda(props.valueFour)}</h2>
+          <h2 className={stylesComponents.colorTitle}>{moneda(props.valueFour)}</h2>
           <p>{props.eightParagraph}</p>
         </div>
         <div className={stylesComponents.divButtons}>
           <button id='whatsapp' className={`${stylesComponents.btnGeneral} ${stylesComponents.color}`} onClick={props.onClick}>
-            <Link to={props.url} className={stylesComponents.white}>Contactanos</Link>
+            <a target="_blank" className={stylesComponents.white} href={props.urlWsp}>Quiero hablar con un asesor</a>
           </button>
           <button id='masInfo' className={stylesComponents.btnGeneral} onClick={props.onClick}>
-            <Link to={props.url}>Mas informacion</Link>
+            <Link to={props.urlInfo}>Mas informacion</Link>
           </button>
         </div>
       </div>
-      <div>
+      <div className={stylesComponents.imgGrid}>
         <img src={figuro} alt="" />
       </div>
     </div >
