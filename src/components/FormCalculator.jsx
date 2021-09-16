@@ -2,6 +2,7 @@ import React from 'react'
 import stylesComponents from '../CSS/components.module.css'
 import information from "../assets/information.png"
 import { Link } from 'react-router-dom';
+import { moneda } from './calculos';
 
 
 const Form = (props) => {
@@ -52,22 +53,22 @@ const Form = (props) => {
       <div className={stylesComponents.results}>
         <div className={stylesComponents.result}>
           <p className={stylesComponents.parrafo1}>{props.firstParagraph}</p>
-          <h2>{props.valueOne}</h2>
+          <h2>{moneda(props.valueOne)}</h2>
           <img src="" alt="" />
           <p className={stylesComponents.parrafo2} >{props.secondParagraph}</p>
         </div>
         <div className={stylesComponents.result}>
           <p className={stylesComponents.parrafo1}>{props.thirdParagraph}</p>
-          <h2>{props.valuetwo}</h2>
+          <h2>{moneda(props.valuetwo)}</h2>
           <p className={stylesComponents.parrafo2}>{props.fourParagraph}</p>
         </div>
         <div className={stylesComponents.result}>
           <p className={stylesComponents.parrafo1}>{props.fiveParagraph}</p>
-          <h2>{props.valueThree}</h2>
+          <h2>{moneda(props.valueThree)}</h2>
         </div>
         <div className={stylesComponents.result4}>
           <p className={stylesComponents.parrafo1}>{props.sevenParagraph}</p>
-          <h2>{props.valueFour}</h2>
+          <h2>{moneda(props.valueFour)}</h2>
         </div>
         <div><Link id="RouterNavLink" to="/formulario">Contactanos </Link></div>
         <Link id="RouterNavLink" to="/formulario">Aprende mas</Link>

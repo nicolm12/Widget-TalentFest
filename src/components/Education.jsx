@@ -22,15 +22,18 @@ const Education = () => {
             setValue(valorMinimo)
         } else if (optionSearchNote === "secondOption") {
             setValue(valorMinimoAnual)
-         }
-       
-    }, [datos,optionSearchNote, setValue]);
+        } else {
+            setValue('no has indicado rango')
+        }
 
+    }, [datos, optionSearchNote, setValue])
 
 
     let total = valorTol(datos.rangeOne, optionSearchNote, datos.rangeTwo)
     let valorSemestre = valorSem(total);
-   
+
+    let valorMaxMonth = valorMaxMes(datos.rangeOne, datos.rangeTwo)
+  
 
 
 
@@ -42,7 +45,7 @@ const Education = () => {
             min={50000}
             max={50000000}
             step={50000}
-            firstInput={"Edad de tu hijo"}
+            firstInput={"Edad de tu hij@"}
             secondInput={"¿Cada cuanto quieres ahorrar?"}
             defaultOption={"Elige una opcion"}
             firstOption={"Todos los meses"}
@@ -58,11 +61,11 @@ const Education = () => {
             thirdParagraph={"Con este ahorro podrías pagar semestres de hasta"}
             valuetwo={valorSemestre}
             fourParagraph={"Por mes para ti"}
-            fiveParagraph={"Tu ahorro total podría varias desde"}
+            fiveParagraph={"tu ahorro total podría varias desde"}
             valueThree={value}
             sixParagraph={"En portafolio conservador"}
             sevenParagraph={"Hasta"}
-            valueFour={"1200"}
+            valueFour={valorMaxMonth}
             eightParagraph={"En un portafolio arriesgado"}
 
             datos={datos}
