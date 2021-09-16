@@ -1,8 +1,9 @@
 import React from 'react';
 import "./formlogin.css";
-import { authListener, createUser } from './firebaseAuth';
-import { useEffect, useState } from 'react';
+import {  createUser } from './firebaseAuth';
+import {  useState } from 'react';
 import { FormRegister } from './FormRegister'
+//import { Redirect } from 'react-router-dom';
 
 const Login = () => {
 
@@ -31,10 +32,17 @@ const Login = () => {
         setPasswordError('');
     }
 
-    const handleSignup = () => {
-        clearErrors();
-        createUser(email, password)
-            .catch(err => {
+    const handleSignup = (e) => {
+        e.preventDefault()
+        console.log('funciona')
+        const Value = createUser(email, password )
+        console.log(Value)
+            .then(res => {
+            console.log(res)
+            //setUser(res.user)
+            //setDisplayName(res.user.displayName)
+        })
+        .catch(err => {
                 switch (err.code) {
                     case "auth/email-already-in-use":
                     case "auth/invalid-email":
@@ -47,7 +55,7 @@ const Login = () => {
             })
     }
 
-    const listenerAuth = () => {
+    /*const listenerAuth = () => {
         authListener((name) => {
             if (name) {
                 clearInputs();
@@ -61,7 +69,7 @@ const Login = () => {
     useEffect(() => {
         listenerAuth();
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
+    }, [])*/
 
     return (
         <FormRegister
@@ -88,7 +96,7 @@ const Login = () => {
             setCountry={setCountry}
             password={password}
             setPassword={setPassword}
-           // handleLogin={handleLogin}
+            handleLogin={handleLogin}
             handleSignup={handleSignup}
             emailError = {emailError}
             passwordError = {passwordError}

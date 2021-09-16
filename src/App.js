@@ -3,7 +3,8 @@ import Grips from './components/Grips';
 import Health from './components/Health';
 import Education from './components/Education';
 //import View from './components/view';
-
+import Dashboard from './components/Dashboard';
+//import { firebaseApp } from './firebase/firebase-config';
 
 import {
   BrowserRouter as Router,
@@ -21,18 +22,21 @@ function App() {
         <Fragment>
           <Router>
             <Switch>
-            <Route path="/pensiones">
-              <Grips></Grips>
-            </Route>
-            <Route path="/salud">
-              <Health></Health>
-            </Route>
-            <Route path="/educacion">
-              <Education></Education>
-            </Route>
-            <Route path="/formulario">
-            <Login />
-            </Route>
+              <Route path="/pensiones">
+                <Grips />
+              </Route>
+              <Route path="/salud">
+                <Health />
+              </Route>
+              <Route path="/educacion">
+                <Education />
+              </Route>
+              <Route path="/formulario">
+                <Login />
+              </Route>
+              <Route path="/dashboard">
+                <Dashboard />
+              </Route>
             </Switch>
           </Router>
         </Fragment>

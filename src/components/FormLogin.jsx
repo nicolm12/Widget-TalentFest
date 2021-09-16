@@ -15,8 +15,6 @@ const Login = () => {
     const [emailError, setEmailError] = useState("");
     const [passwordError, setPasswordError] = useState("")
 
-
-
     const clearInputs = () => {
         setName('');
         setlasName('');
@@ -31,18 +29,25 @@ const Login = () => {
         setPasswordError('');
     }
 
-    const handleSignup = () => {
+    const handleSignup2 = () => {
         clearErrors();
+        console.log('funciono')
+        
         createUser(email, password)
+        .then (res => console.log(res))
+        
             .catch(err => {
                 switch (err.code) {
                     case "auth/email-already-in-use":
                     case "auth/invalid-email":
                         setEmailError(err.message);
                         break;
+                        
                     case "auth/weak-password":
                         setPasswordError(err.message)
                         break;
+                        default: break;
+
                 }
             })
     }
@@ -64,37 +69,40 @@ const Login = () => {
     }, [])
 
     return (
-        <FormRegister
+        <div>
+            {
+                    <FormRegister
 
-            textitle={'Crea tu cuenta'}
-            texparrafo={'Al crear tu cuenta asegurate de que tu contraseña tenga al menos una mayuscula, numero  o caracter especial'}
-            texname={'Tu Nombre'}
-            texLastName={'Tu Apellido'}
-            texgender={'Soy'}
-            texcountry={'Vivo en '}
-            texemail={'Email'}
-            texpassword={'Contraseña'}
-            texterminos={'Acepto los Terminos y Condiciones'}
-            btn={'registrarme'}
-            name={name}
-            setName={setName}
-            lasName={lasName}
-            setlasName={setlasName}
-            gender={gender}
-            setGender={setGender}
-            email={email}
-            country={country}
-            setEmail={setEmail}
-            setCountry={setCountry}
-            password={password}
-            setPassword={setPassword}
-           // handleLogin={handleLogin}
-            handleSignup={handleSignup}
-            emailError = {emailError}
-            passwordError = {passwordError}
-        >
-        </FormRegister>
-    );
+                        textitle={'Crea tu cuenta'}
+                        texparrafo={'Al crear tu cuenta asegurate de que tu contraseña tenga al menos una mayuscula, numero  o caracter especial'}
+                        texname={'Tu Nombre'}
+                        texLastName={'Tu Apellido'}
+                        texgender={'Soy'}
+                        texcountry={'Vivo en '}
+                        texemail={'Email'}
+                        texpassword={'Contraseña'}
+                        texterminos={'Acepto los Terminos y Condiciones'}
+                        btn={'registrarme'}
+                        name={name}
+                        setName={setName}
+                        lasName={lasName}
+                        setlasName={setlasName}
+                        gender={gender}
+                        setGender={setGender}
+                        email={email}
+                        country={country}
+                        setEmail={setEmail}
+                        setCountry={setCountry}
+                        password={password}
+                        setPassword={setPassword}
+                        // handleLogin={handleLogin}
+                        handleSignup={handleSignup2}
+                        emailError={emailError}
+                        passwordError={passwordError}
+                    />
+                }
+        </div>
+    )
 }
 
 
