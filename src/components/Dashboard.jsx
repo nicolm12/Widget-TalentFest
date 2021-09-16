@@ -5,7 +5,7 @@ import styleDash from '../CSS/mainview.module.css'
 // import ResponsiveMenu from 'react-responsive-navbar';
 // import { FaBars,FaTimes } from 'react-icons/fa';
 // import { useState } from 'react';
-import Figuro from "../assets/Figuro Transparente.png"
+import Figuro from "../assets/figuroLogo.png"
 
 
 export default function Dashboard() {
