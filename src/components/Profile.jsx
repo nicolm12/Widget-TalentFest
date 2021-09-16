@@ -1,23 +1,33 @@
 import React from 'react'
 import styleDash from '../CSS/mainview.module.css'
-import FormRegister from './FormRegister'
+import Figuro from "../assets/Figuro Transparente.png"
 
-export default function Mainview() {
 
- const [changeView, serChangeview] = useState(false)
+
+function Profile() {
+
+//  const [changeView, serChangeview] = useState(false)
  
   return(
   <>
   <div className={styleDash.profile}>
-      <div>
-          <h2>Mi perfil</h2>
-          <div>
-              <img src="" alt="" />
-              <button>Subir</button>
+          <div className={styleDash.navBarProfile} >
+            <img src="" alt="" />
+            <img src={Figuro} alt="" />
+          </div>
+          <div className={styleDash.myProfile}>
+            <h2>Mi perfil</h2>
+          </div>
+          <div className={styleDash.avatar}>
+              <div className={styleDash.avatarImg}>
+                 <h3>AVATAR</h3>
+                 <img src="" alt="" />
+              </div>
+              <button>Borrar</button>
               <button>Borrar</button>
           </div>
-          <div>
-              <form action="">
+          <div className={styleDash.formDatos}>
+              <form action="" className = {styleDash.form}>
                 <label>Nombre</label>
                   <input type="text" name="Text Name" className={styleDash.input} />
                 <label>Apellido</label>
@@ -32,11 +42,13 @@ export default function Mainview() {
                   <input type="text" name="Email" className={styleDash.input} />
                 <label>Numero de telefono</label>
                   <input type="number" name="Phone" className={styleDash.input} />
+                <button>Guardar Cambios</button>
               </form>
           </div> 
       </div>
-  </div>
-  ) }
   </>
   )
 }
+
+
+export default Profile;

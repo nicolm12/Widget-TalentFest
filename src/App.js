@@ -4,6 +4,7 @@ import Health from './components/Health';
 import Education from './components/Education';
 import View from './components/view';
 import Dashboard from './components/Dashboard';
+import Profile from './components/Profile'
 
 import {
   BrowserRouter as Router,
@@ -34,6 +35,9 @@ function App() {
           </Route>
           <Route path="/dashboard">
             <Dashboard/>
+          </Route>
+          <Route path="/perfil">
+            <Profile/>
           </Route>
             </Switch>
           </Router>
