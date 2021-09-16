@@ -1,16 +1,25 @@
 .container{
-    background-color: #d9cfff;
+    background-color: #fff;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    width: 5%;
+    height: 50vh;
+    background:#f1effa;
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+
 }
 .grupoContainer{
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 20%;
+    background-color: #d9cfff;
+    padding: 40px;
+    height: px;
+    width: 50%;
 }
 
 .logo {
-    width: 100px;
+    width: 20%;
 
 }
 
@@ -22,12 +31,52 @@
 }
 
 .input{
-    width: 100%;
+    width: 40%;
 	background: #fff;
 	border-radius: 2px;
-	height: 45px;
-	line-height: 45px;
+	height: 25px;
+	line-height: 10px;
 	padding: 0 40px 0 10px;
-	transition: .3s ease all;
-	border: 3px solid transparent;
+	
+}
+
+.btn{
+    width: 20%;
+}
+.texPstyle{
+font-size: large;
+}
+
+@media (min-width: 750px) {
+    .container{
+        width: 0%;
+        height:0vh;
+        background:#f1effa;
+        display: flex;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .input{
+        width: 50%;
+        background: #fff;
+        border-radius: 2px;
+        height: 45px;
+        line-height: 45px;
+        width: 50%;
+        }
+    .logo{
+        width: 30%;
+        height: 10%;
+        
+    }
+    .grupoContainer{
+        display: flex;
+        flex-direction: column;
+        padding: 40%;
+        height: 45%;
+        width: 50%;
+        background-color: #d9cfff;
+        
+    }
+
 }

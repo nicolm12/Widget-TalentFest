@@ -29,14 +29,14 @@ const Login = () => {
         setPasswordError('');
     }
 
-    const handleSignup2 = () => {
+    const handleSignup2 = (e) => {
+        e.preventDefault()
         clearErrors();
         console.log('funciono')
         
         createUser(email, password)
         .then (res => console.log(res))
-        
-            .catch(err => {
+                .catch(err => {
                 switch (err.code) {
                     case "auth/email-already-in-use":
                     case "auth/invalid-email":
@@ -72,7 +72,7 @@ const Login = () => {
         <div>
             {
                     <FormRegister
-
+                    
                         textitle={'Crea tu cuenta'}
                         texparrafo={'Al crear tu cuenta asegurate de que tu contraseña tenga al menos una mayuscula, numero  o caracter especial'}
                         texname={'Tu Nombre'}
@@ -81,7 +81,8 @@ const Login = () => {
                         texcountry={'Vivo en '}
                         texemail={'Email'}
                         texpassword={'Contraseña'}
-                        texterminos={'Acepto los Terminos y Condiciones'}
+                        texterminos={'He leído y estoy de acuerdo con los Términos del Servicio'}
+                        privacidad={'Este sitio recoge nombres, correos electronicos y otra informacion del usuario. Aceptolos terminos establecidos en la politicas de privacidad'}
                         btn={'registrarme'}
                         name={name}
                         setName={setName}

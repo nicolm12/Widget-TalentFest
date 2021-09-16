@@ -1,14 +1,14 @@
-import  { firebaseApp } from '../firebase/firebase-config'
+import  { fb } from '../firebase/firebase-config'
 
 //firebase auth 
 
-const handleLogout = () => firebaseApp.auth().signOut() 
+const handleLogout = () => fb.auth().signOut() 
 
-const loginUser = (email, password) => firebaseApp.auth().signInWithEmailAndPassword(email, password)
+const loginUser = (email, password) => fb.signInWithEmailAndPassword(email, password)
 
-const createUser = (email, password) => firebaseApp.auth().createUserWithEmailAndPassword(email, password)
+const createUser = (email, password) => fb.createUserWithEmailAndPassword(email, password)
 
-const authListener = (callback) => firebaseApp.auth().onAuthStateChanged(callback)
+const authListener = (callback) => fb.onAuthStateChanged(callback)
 
 
 
