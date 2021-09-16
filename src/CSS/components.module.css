@@ -3,8 +3,6 @@
     display: grid;
     grid-template-columns: repeat(2,1fr);
     width: 100vw;
-    height: 100vh;
- 
 }
 .wrapper{
     display: flex;
@@ -21,38 +19,37 @@
     display: flex;
     flex-direction: column;
 }
-.form label{
+/* .form label{
     font-family:Poppins light italic;
     font-size: small;
     color:  #7474eb;
     margin-top: 15px;
     margin-bottom: 10px;
-}
-.form h3{
+} */
+/* .form h3{
     font-size: x-large;
     color: #2C4A5E;
     font-family: roboto;
     font-size: x-large;
     margin-top: 5px;
     margin-bottom: 10px;
-}
+} */
 .range{
 -webkit-appearance: none;
     height: 3px;
     background-color:#5258CA ;
-   border-radius: 50px;
-   margin-bottom:15px ;
-  
+    border-radius: 50px;
+    margin-bottom:15px ;
 }
 .range:hover{
     opacity: 1;
 }
 .select{
-   -webkit-appearance: none;
-   outline: 0;
-   box-shadow: none;
-   border:#5258CA solid 2px ;
-   background: #d9cfff;
+    -webkit-appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border:#5258CA solid 2px ;
+    background: #d9cfff;
     width: 100%;
     height: 40px;
     border-radius: 10px;
@@ -78,6 +75,7 @@
 .divInfo{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .information{
     width: 2vw;
@@ -94,6 +92,7 @@
     margin: 15px;
     padding:15px ;
     padding-top: 30px;
+    box-shadow: 10px 5px 5px #bab5cc;
 }
 .result {
     display:block;
@@ -104,14 +103,14 @@
 }
 .parrafo1{
     font-size: small;
-    font-family: roboto;
+    font-family: 'Poppins', sans-serif;
     color:#5258CA;
-    margin-top:20px;
+    margin:20px 0;
 }
-.result h2{
-    font-size: x-large;
+.result h2,
+h3{
+    font-size: 40px;
     color: #2C4A5E;
-   
 }
 .result4 {
     display:block;
@@ -126,9 +125,41 @@
 }
 .parrafo2{
     font-size: small;
-    font-family:Poppins light italic;
+    font-family: 'Poppins', sans-serif;
     color:#9691ff;
-  
+}
+.imgWrapper{
+    display: flex;
+    justify-content: space-between;
+    min-width: 60px;
+    text-align: center;
+}
+.imgMoney{
+    width: 60px;
+}
+.divButtons{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 40px;
+}
+.btnGeneral{
+    height: 40px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    border: 1px #5258CA solid;
+    background-color: white;
+}
+.color{
+    background-color: #5258CA;
+}
+.color .white{
+    color: white;
+}
+.btnGeneral a{
+    text-decoration: none;
+    font-family: 'Poppins';
+    color: #5258CA;
+    font-weight: 1000;
 }
 
 @media (max-width: 500px) {
@@ -137,6 +168,5 @@
         flex-direction:row;
         width: 100vw;
         height: 100vh;
-     
     }
 }

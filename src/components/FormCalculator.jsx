@@ -3,6 +3,7 @@ import stylesComponents from '../CSS/components.module.css'
 import information from "../assets/information.png"
 import { Link } from 'react-router-dom';
 import { moneda } from './calculos';
+import figuro from '../assets/figuroLogo.png'
 
 
 const Form = (props) => {
@@ -21,12 +22,11 @@ const Form = (props) => {
     e.preventDefault();
   };
 
-
   return (
     <div className={stylesComponents.container}>
-      <div className={stylesComponents.wrapper}>
+      <div className={`${stylesComponents.wrapper} ${stylesComponents.result}`}>
         <h2>{props.title}</h2>
-        <form action="#" className={stylesComponents.form} onSubmit={handleSubmit}>
+        <form action="#" className={`${stylesComponents.form} ${stylesComponents.parrafo1}`} onSubmit={handleSubmit}>
           <div className={stylesComponents.divInfo}>
             <label htmlFor="">{props.firstInput}</label>
             <img src={information} alt="information" className={stylesComponents.information} />
@@ -53,8 +53,10 @@ const Form = (props) => {
       <div className={stylesComponents.results}>
         <div className={stylesComponents.result}>
           <p className={stylesComponents.parrafo1}>{props.firstParagraph}</p>
-          <h2>{moneda(props.valueOne)}</h2>
-          <img src="" alt="" />
+          <div className={stylesComponents.imgWrapper}>
+            <h2>{moneda(props.valueOne)}</h2>
+            <img src={props.img} alt={props.alt} className={stylesComponents.imgMoney} />
+          </div>
           <p className={stylesComponents.parrafo2} >{props.secondParagraph}</p>
         </div>
         <div className={stylesComponents.result}>
@@ -67,15 +69,24 @@ const Form = (props) => {
           <h2>{moneda(props.valueThree)}</h2>
           <p>{props.sixParagraph}</p>
         </div>
-        <div className={stylesComponents.result4}>
+        <div className={stylesComponents.result}>
           <p className={stylesComponents.parrafo1}>{props.sevenParagraph}</p>
           <h2>{moneda(props.valueFour)}</h2>
           <p>{props.eightParagraph}</p>
         </div>
-        <div><Link id="RouterNavLink" to="/formulario">Contactanos </Link></div>
-        <Link id="RouterNavLink" to="/formulario">Aprende mas</Link>
+        <div className={stylesComponents.divButtons}>
+          <button id='whatsapp' className={`${stylesComponents.btnGeneral} ${stylesComponents.color}`} onClick={props.onClick}>
+            <Link to={props.url} className={stylesComponents.white}>Contactanos</Link>
+          </button>
+          <button id='masInfo' className={stylesComponents.btnGeneral} onClick={props.onClick}>
+            <Link to={props.url}>Mas informacion</Link>
+          </button>
+        </div>
       </div>
-    </div>
+      <div>
+        <img src={figuro} alt="" />
+      </div>
+    </div >
   );
 };
 
