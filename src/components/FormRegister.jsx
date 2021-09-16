@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../CSS/form.module.css'
-import Figuro from "../assets/Figuro Transparente.png"
+import Figuro from "../assets/figuroLogo.png"
 
 
 

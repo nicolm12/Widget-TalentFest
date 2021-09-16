@@ -21,17 +21,26 @@ export default function Mainview() {
             <h2>Tus Webinars y Cursos</h2>
             <div  className={styleDash.videos}>
             <div className={styleDash.card}>
-                <iframe src="https://www.youtube.com/embed/y6Sxv-sUYtM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="https://player.vimeo.com/video/606906660?h=01f64a6d65&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Brecha Pensional.mp4" className ={styleDash.videoCard}></iframe>
+
+                {/* <script src="https://player.vimeo.com/api/player.js"> */}
+
                 <h4>Lorem ipsum </h4>
                 <p>dolor sit amet consectetur adipisicing elit. Ipsam aut ducimus nobis suscipit molestiae, iusto porro delectus maiores dolorum dicta unde </p>
             </div>
             <div  className={styleDash.card}>
-                <iframe src="https://www.youtube.com/embed/y6Sxv-sUYtM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="https://player.vimeo.com/video/606906928?h=7cb6aa6b68&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Seguro de Salud.mp4" className ={styleDash.videoCard}></iframe>
+
+                {/* <script src="https://player.vimeo.com/api/player.js"></script> */}
                 <h4>Lorem ipsum </h4>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam aut ducimus nobis suscipit molestiae, iusto porro delectus maiores dolorum </p>
             </div>
             <div  className={styleDash.card}>
-                <iframe src="https://www.youtube.com/embed/y6Sxv-sUYtM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="https://player.vimeo.com/video/606907695?h=da2df062a1&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Seguro Educativo.mp4" className ={styleDash.videoCard}></iframe>
+
+
+                {/* <script src="https://player.vimeo.com/api/player.js"></script> */}
+
                 <h4>Lorem ipsum </h4>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam aut ducimus nobis suscipit molestiae, iusto porro delectus maiores dolorum </p>
             </div>

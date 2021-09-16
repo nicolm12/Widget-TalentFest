@@ -1,6 +1,6 @@
 import React from 'react'
 import styleDash from '../CSS/mainview.module.css'
-import Figuro from "../assets/Figuro Transparente.png"
+import Figuro from "../assets/figuroLogo.png"
 
 export default function Sidebar() {
   return(
@@ -31,12 +31,12 @@ export default function Sidebar() {
         </div>
     </div>
     <div className={styleDash.usuarioSidebar}>
-       <div>
+       <div className={styleDash.userLogin}>
           <img src="" alt="" />
           <h3>Hola </h3>
           <p>Bienvenido</p>
        </div>
-       <div>
+       <div className={styleDash.userLogout}>
           <button>LogOut</button>
        </div>
     </div>

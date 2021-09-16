@@ -31,7 +31,19 @@ body{
 .imgLogo {
     width: 6em;
     height: 2em;
-    margin-left: 6em;
+}
+
+.userLogin{
+    font-size: 1em;
+}
+
+.userLogout button {
+    background: #5258CA ;
+    border: none;
+    color: white;
+    width: 10em;
+    height: 2em;
+    border-radius: 2px;
 }
 
 
@@ -51,6 +63,8 @@ body{
 
 .logoSidebar{
     width: 100%;
+    display: flex;
+    justify-content: center;
 
 }
 
@@ -126,6 +140,13 @@ body{
     display: none;
 }
 
+.videoCard {
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+
 
 /* profile */
 
@@ -134,20 +155,32 @@ body{
     height: 100vh;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 10% 10% 20% 50% 10%;
+    grid-template-rows: 5% 10% 20% 50% 10% 5%;
     padding: 0 2em;
 }
 
 .navBarProfile {
-    width: 100%;
+    width: 80%;
     height: 100%;
     grid-row-start:1 ;
     grid-row-end: 2;
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.navBarProfile img {
-    width: 5em;
+.navBarProfile img:first-child {
+    width: 2em;
+    align-self:center;
 }
+
+.navBarProfile img:nth-child(2) {
+    width: 5em;
+    justify-self: center;
+    align-self:center;
+} 
 
 .myProfile {
     width: 80%;
@@ -169,13 +202,29 @@ body{
     align-items: center;
     margin-left: auto;
     margin-right: auto;
-    justify-content:space-evenly
+    padding-bottom: 1em;
+    justify-content:space-evenly;
+    border-bottom: rgb(216, 212, 212) 0.1em solid;
 }
 
 .avatar button {
     height: 3em;
     width: 6em;
+    border-radius: 1em;
+}
 
+.avatar button:nth-child(2) {
+    background: #5258CA ;
+    border: none;
+    color: white;
+}
+
+.avatar button:nth-child(3) {
+    border: #5258CA  0.2em solid;
+}
+
+.avatar h3{
+ font-size: 1.5em;
 }
 
 .avatarImg {
@@ -198,7 +247,7 @@ body{
     height: 100%;
     grid-row-start:4 ;
     grid-row-end: 5;
- 
+    padding-top: 2em;
 }
 
 .form {
@@ -213,12 +262,14 @@ body{
     border-radius: 5px;   
     margin-left: auto;
     margin-right: auto;
+    border: 0.1em rgb(216, 212, 212) solid;
 }
 
 .form label {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+    font-weight: bolder;
 }
 
 .form button {
@@ -227,8 +278,21 @@ body{
     border-radius: 5px;
     margin-left: auto;
     margin-right: auto;
+    background: #5258CA;
+    color: white;
+    border: none;
 }
 
+/* .footerProfile{
+    width: 80%;
+    height: 100%;
+    grid-row-start:5;
+    grid-row-end: 6;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1em;
+}
+ */
 
 
 @media (min-width: 750px) {
@@ -283,7 +347,10 @@ body{
         align-items: center;
         text-align: center;
         flex-direction: column;
+    }
 
+    .opcionesSidebar h3{
+       font-size: 1.5em;
     }
 
     .usuarioSidebar{
@@ -293,6 +360,10 @@ body{
         flex-direction: column;
         align-items: center;
         text-align: center;
+    }
+
+    .usuarioSidebar h3 {
+        font-size: 1.5em;
     }
 
 
@@ -363,5 +434,139 @@ body{
     .footer p{
         font-size: 0.8em;
     }  
+
+
+
+
+    .profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .form {
+        display: flex;
+
+    }
+
+   
+    /* 
+    
+    .form input, select{
+        width: 80%;
+        height: 2.5em;
+        margin:0.5em 0 2em 0; 
+        border-radius: 5px;   
+        margin-left: auto;
+        margin-right: auto;
+        border: 0.1em rgb(216, 212, 212) solid;
+    }
+    
+    .form label {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: bolder;
+    }
+    
+    .form button {
+        width: 50%;
+        height: 3em;
+        border-radius: 5px;
+        margin-left: auto;
+        margin-right: auto;
+        background: #5258CA;
+        color: white;
+        border: none;
+    }
+ */
+
+
+    
+    /* .navBarProfile {
+        width: 80%;
+        height: 100%;
+        grid-row-start:1 ;
+        grid-row-end: 2;
+        display: grid;
+        grid-template-columns: 10% 90%;
+        grid-template-rows: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .navBarProfile img:first-child {
+        width: 2em;
+        align-self:center;
+    }
+    
+    .navBarProfile img:nth-child(2) {
+        width: 5em;
+        justify-self: center;
+        align-self:center;
+    } 
+    
+    .myProfile {
+        width: 80%;
+        height: 100%;
+        grid-row-start:2 ;
+        grid-row-end: 3;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        align-items: center;
+    }
+    
+    .avatar {
+        width: 80%;
+        height: 100%;
+        grid-row-start:3 ;
+        grid-row-end: 4;
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 1em;
+        justify-content:space-evenly;
+        border-bottom: rgb(216, 212, 212) 0.1em solid;
+    }
+    
+    .avatar button {
+        height: 3em;
+        width: 6em;
+        border-radius: 1em;
+    }
+    
+    .avatar button:nth-child(2) {
+        background: #5258CA ;
+        border: none;
+        color: white;
+    }
+    
+    .avatar button:nth-child(3) {
+        border: #5258CA  0.2em solid;
+    }
+    
+    .avatar h3{
+     font-size: 1.5em;
+    }
+    
+    .avatarImg {
+        display: flex;
+        flex-direction: column;
+    } 
+    
+    .avatarImg img{
+        width: 5em;
+        height : 5em;
+        background: whitesmoke;
+        border: none;
+        border-radius: 50%;
+        margin-top: 0.2em;
+        box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.2);
+    }
+    
+    */
 }
 
