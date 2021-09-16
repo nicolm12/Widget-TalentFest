@@ -9,7 +9,8 @@ import {
   Route
 } from "react-router-dom";
 import { Fragment } from 'react';
-import { MostrarLogin } from './components/MostrarLogin'
+import { MostrarLogin } from './components/ViewRegister'
+
 
 
 

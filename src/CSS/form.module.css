@@ -1,5 +1,5 @@
 .container{
-    background-color: #fff;
+    background-color: #d9cfff;
     display: grid;
     width: 5%;
     height: 50vh;
@@ -12,7 +12,7 @@
     display: flex;
     flex-direction: column;
     padding: 20%;
-    background-color: #d9cfff;
+    background-color: #fff;
     padding: 40px;
     height: px;
     width: 50%;
@@ -51,6 +51,7 @@ font-size: large;
     .container{
         width: 0%;
         height:0vh;
+        background: #fff;
         background:#f1effa;
         display: flex;
         font-family: 'Poppins', sans-serif;
@@ -58,7 +59,7 @@ font-size: large;
 
     .input{
         width: 50%;
-        background: #fff;
+        background:#f1effa;
         border-radius: 2px;
         height: 45px;
         line-height: 45px;

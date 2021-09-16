@@ -1,8 +1,8 @@
 import React from 'react';
-import { createUser, authListener} from './firebaseAuth';
-import { useState, useEffect } from 'react';
-import {  RegistroForm } from "./Registroform";
-import {withRouter } from "react-router-dom"
+import { createUser } from './firebaseAuth';
+import { useState } from 'react';
+import { RegistroForm } from './Registroform'
+
 
 const MostrarLogin = () => {
 
@@ -15,56 +15,27 @@ const MostrarLogin = () => {
     const [emailError, setEmailError] = useState("");
     const [passwordError, setPasswordError] = useState("")
 
-    const clearInputs = () => {
-        setNameN('');
-        setlasName('');
-        setGender('');
-        setCountry('');
-        setEmail('');
-        setPassword('');
-    }
 
-    const handleSignup = (e) => {
-        e.preventDefault()
-        
-        createUser(email, password)
-                .catch(err => {
+    const handleSignup = () => {
+            createUser(email, password)
+            .catch(err => {
                 switch (err.code) {
                     case "auth/email-already-in-use":
                     case "auth/invalid-email":
                         setEmailError(err.message);
                         break;
-                        
+
                     case "auth/weak-password":
                         setPasswordError(err.message)
                         break;
-                        default: break;
-
+                    default: break;
                 }
             })
     }
-
-    const listenerAuth = () => {
-        authListener((user) => {
-            if(user){
-                clearInputs();
-                setEmail(user);
-            } else {
-                setEmail("");
-    }
-})
-}
-    
-    useEffect(() => {
-    listenerAuth();
-        }, [])
-    
-
     return (
         <div>
             {
                     < RegistroForm
-
                         textitle={'Crea tu cuenta'}
                         texparrafo={'Al crear tu cuenta asegurate de que tu contraseña tenga al menos una mayuscula, numero  o caracter especial'}
                         texname={'Tu Nombre'}

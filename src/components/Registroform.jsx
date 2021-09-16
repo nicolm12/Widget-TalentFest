@@ -3,10 +3,10 @@ import styles from '../CSS/form.module.css'
 import Figuro from "../assets/Figuro Transparente.png"
 
 const RegistroForm = (props) => {
-
+console.log(props)
     const {
-        nameN,
-        setNameN,
+        name,
+        setName,
         lasName,
         setlasName,
         gender,
@@ -22,17 +22,17 @@ const RegistroForm = (props) => {
 
     } = props
 
-    const nameChange = (e) => setNameN(e.target.value);
+    const nameChange = (e) => setName(e.target.value);
     const lasNameChange = (e) => setlasName(e.target.value);
     const genderChange = (e) => setGender(e.target.value);
     const countryChange = (e) => setCountry(e.target.value);
     const emailChange = (e) => setEmail(e.target.value);
     const passwordChange = (e) => setPassword(e.target.value)
 
-/* const enviarDatos = (event) => {
+ const enviarDatos = (event) => {
 
 event.preventDefault();
-}*/
+}
 
     return (
         <>
@@ -41,9 +41,9 @@ event.preventDefault();
                 <div >
                     <h2>{props.textitle}</h2>
                     <p>{props.texparrafo}</p>
-                    <form className={styles.formLogin} >
+                    <form className={styles.formLogin} onsubmit={enviarDatos} >
                         <label className={styles.tex}>{props.texname}</label>
-                        <input type="tex" name="name" className={styles.input} value={nameN} placeholder="name" onChange={nameChange} />
+                        <input type="tex" name="name" className={styles.input} value={name} placeholder="name" onChange={nameChange} />
                         <label>{props.texLastName}</label>
                         <input type="text" name="lasName" className={styles.input} placeholder="Apellido" required value={lasName} onChange={lasNameChange} />
                         <label>{props.texgender}</label>
