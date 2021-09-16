@@ -2,6 +2,7 @@ import React from 'react';
 import Form from './FormCalculator'
 import { useState, useEffect } from 'react';
 import { valorTol, valorSem, valorMinMonth, valorMinYear, valorMaxMes } from './calculos'
+import marranito from '../assets/piggy-bank.png'
 
 
 const Education = () => {
@@ -33,7 +34,7 @@ const Education = () => {
     let valorSemestre = valorSem(total);
 
     let valorMaxMonth = valorMaxMes(datos.rangeOne, datos.rangeTwo)
-  
+
 
 
 
@@ -57,6 +58,8 @@ const Education = () => {
 
             firstParagraph={"Cuando tu hijo se gradúe podrás tener ahorrado:"}
             valueOne={total}
+            img={marranito}
+            alt={"logo ahorro"}
             secondParagraph={"Para su eduacación superior"}
             thirdParagraph={"Con este ahorro podrías pagar semestres de hasta"}
             valuetwo={valorSemestre}

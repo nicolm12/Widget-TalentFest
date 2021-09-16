@@ -2,7 +2,7 @@ import React from 'react'
 import stylesComponents from '../CSS/components.module.css'
 import information from "../assets/information.png"
 import { Link } from 'react-router-dom';
-import { moneda } from './calculos';
+import { moneda, valorMaxAño } from './calculos';
 
 
 const Form = (props) => {
@@ -20,13 +20,20 @@ const Form = (props) => {
   const handleSubmit = e => {
     e.preventDefault();
   };
+  // function noText(value) {
+  //   if (isNaN(moneda(value))) {
+  //     console.log('ingresa un valor')
+  //   } else {
+  //     moneda(value)
+  //   }
+  // }
 
 
   return (
     <div className={stylesComponents.container}>
-      <div className={stylesComponents.wrapper}>
+      <div className={`${stylesComponents.wrapper} ${stylesComponents.result}`}>
         <h2>{props.title}</h2>
-        <form action="#" className={stylesComponents.form} onSubmit={handleSubmit}>
+        <form action="#" className={`${stylesComponents.form} ${stylesComponents.parrafo1}`} onSubmit={handleSubmit}>
           <div className={stylesComponents.divInfo}>
             <label htmlFor="">{props.firstInput}</label>
             <img src={information} alt="information" className={stylesComponents.information} />
@@ -53,8 +60,10 @@ const Form = (props) => {
       <div className={stylesComponents.results}>
         <div className={stylesComponents.result}>
           <p className={stylesComponents.parrafo1}>{props.firstParagraph}</p>
-          <h2>{moneda(props.valueOne)}</h2>
-          <img src="" alt="" />
+          <div className={stylesComponents.imgWrapper}>
+            <h2>{moneda(props.valueOne)}</h2>
+            <img src={props.img} alt={props.alt} className={stylesComponents.imgMoney} />
+          </div>
           <p className={stylesComponents.parrafo2} >{props.secondParagraph}</p>
         </div>
         <div className={stylesComponents.result}>
@@ -66,14 +75,18 @@ const Form = (props) => {
           <p className={stylesComponents.parrafo1}>{props.fiveParagraph}</p>
           <h2>{moneda(props.valueThree)}</h2>
         </div>
-        <div className={stylesComponents.result4}>
+        <div className={stylesComponents.result}>
           <p className={stylesComponents.parrafo1}>{props.sevenParagraph}</p>
           <h2>{moneda(props.valueFour)}</h2>
         </div>
-        <div><Link id="RouterNavLink" to="/formulario">Contactanos </Link></div>
-        <Link id="RouterNavLink" to="/formulario">Aprende mas</Link>
+        <div>
+          <Link id="RouterNavLink" to="/formulario">Contactanos </Link>
+        </div>
+        <div>
+          <Link id="RouterNavLink" to="/formulario">Aprende mas</Link>
+        </div>
       </div>
-    </div>
+    </div >
   );
 };
 
