@@ -6,7 +6,7 @@ import Figuro from "../assets/figuroLogo.png"
 
 
 export default function Dashboard() {
-  
+
 
   return (
     <div className={styleDash.container}>

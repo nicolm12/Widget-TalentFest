@@ -19,21 +19,6 @@
     display: flex;
     flex-direction: column;
 }
-/* .form label{
-    font-family:Poppins light italic;
-    font-size: small;
-    color:  #7474eb;
-    margin-top: 15px;
-    margin-bottom: 10px;
-} */
-/* .form h3{
-    font-size: x-large;
-    color: #2C4A5E;
-    font-family: roboto;
-    font-size: x-large;
-    margin-top: 5px;
-    margin-bottom: 10px;
-} */
 .range{
 -webkit-appearance: none;
     height: 3px;
@@ -149,6 +134,9 @@ h3{
     border: 1px #5258CA solid;
     background-color: white;
 }
+.result .colorTitle{
+    color: #5258CA;
+}
 .color{
     background-color: #5258CA;
 }
@@ -161,12 +149,23 @@ h3{
     color: #5258CA;
     font-weight: 1000;
 }
+.imgGrid{
+    display: grid;
+    grid-column: 1/ 4 span;
+    justify-self: center;
+    margin: 10px;
+}
+.imgGrid img{
+    width: 100px;
+}
 
-@media (max-width: 500px) {
+@media (max-width: 400px) {
     .container{
+        display: block;
+    }
+    .imgGrid{
         display: flex;
-        flex-direction:row;
-        width: 100vw;
-        height: 100vh;
+        justify-content: center;
+        padding: 10px;
     }
 }
