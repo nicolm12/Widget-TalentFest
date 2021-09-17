@@ -30,12 +30,14 @@ const Form = (props) => {
           <div className={stylesComponents.divInfo}>
             <label htmlFor="">{props.firstInput}</label>
             <img src={information} alt="information" className={stylesComponents.information} />
+            <span className={stylesComponents.tooltip} >Información</span>
           </div>
-          <h3>{props.datos.rangeOne}</h3>
+          <h3>{props.valueRangeOne}</h3>
           <input className={stylesComponents.range} type="range" name="rangeOne" min={props.minAge} max={props.maxAge} step={props.stepAge} onChange={handleInputChange} />
           <div className={stylesComponents.divInfo}>
             <label htmlFor="">{props.secondInput}</label>
             <img src={information} alt="information" className={stylesComponents.information} />
+            <span className={stylesComponents.tooltip} >Información</span>
           </div>
           <select id="optionSearch" name="options" value={props.optionSearchNote} onChange={selectChange} className={stylesComponents.select}>
             <option value="defaultOption">{props.defaultOption}</option>
@@ -45,8 +47,9 @@ const Form = (props) => {
           <div className={stylesComponents.divInfo}>
             <label htmlFor="">{props.thirdInput}</label>
             <img src={information} alt="information" className={stylesComponents.information} />
+            <span className={stylesComponents.tooltip} >Información</span>
           </div>
-          <h3>{props.datos.rangeTwo}</h3>
+          <h3>{props.valueRangeTwo}</h3>
           <input className={stylesComponents.range} type="range" name="rangeTwo" min={props.min} max={props.max} step={props.step} onChange={handleInputChange} />
         </form>
       </div>

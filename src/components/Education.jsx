@@ -1,7 +1,7 @@
 import React from 'react';
 import Form from './FormCalculator'
 import { useState, useEffect } from 'react';
-import { valorTol, valorSem, valorMinMonth, valorMinYear, valorMaxMes } from './calculos'
+import { valorTol, valorSem, valorMinMonth, valorMinYear, valorMaxMes, moneda } from './calculos'
 import marranito from '../assets/piggy-bank.png'
 
 
@@ -70,7 +70,8 @@ const Education = () => {
             sevenParagraph={"Hasta"}
             valueFour={valorMaxMonth}
             eightParagraph={"En un portafolio arriesgado"}
-
+            valueRangeOne={datos.rangeOne}
+            valueRangeTwo={moneda(datos.rangeTwo)}
             datos={datos}
             setDatos={setDatos}
             setOptionSearchNote={setOptionSearchNote}

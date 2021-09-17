@@ -2,7 +2,7 @@ import React from 'react';
 import Form from './FormCalculator'
 import rates from './rates.js'
 import { useState } from 'react';
-import { percent, percentYear, minCoverageDisease, minCoverageAccident, secureRisk } from './calculos';
+import { percent, percentYear, minCoverageDisease, minCoverageAccident, secureRisk, moneda } from './calculos';
 import billete from '../assets/bankruptcy.png'
 // console.log(rates.pensionalGap[0].rate, "comentario chiquito")
 
@@ -60,6 +60,8 @@ const Grips = () => {
       sixParagraph={"Por invalidez"}
       sevenParagraph={"Este riesgo lo puedes cubrir por solo"}
       valueFour={secureRiskMin}
+      valueRangeOne={moneda(datosSlider.rangeOne)}
+      valueRangeTwo={datosSlider.rangeTwo}
       datos={datosSlider}
       setDatos={setDatosSlider}
       setOptionSearchNote={setOptionSearch}

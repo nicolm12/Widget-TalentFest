@@ -158,6 +158,50 @@ h3{
 .imgGrid img{
     width: 100px;
 }
+.divInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.information{
+    width: 2vw;
+    height: 2vw;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    position: relative;
+    cursor: pointer;
+    
+}
+
+.divInfo:hover .tooltip{
+    display: inline-block; 
+}
+.tooltip{
+    background-color: white;
+    z-index: 500;
+    line-height: 20px; 
+    text-align:center;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: none;
+    right: 35px;
+    position: absolute;
+    
+}
+
+.tooltip::after{
+    content: "";
+    display:block;
+    border-top: 7px solid transparent;
+    border-bottom:7px solid transparent ;
+    border-left: 7px solid white;
+    position:absolute;
+    right: -5px;
+    top: 7px; 
+}
 
 @media (max-width: 400px) {
     .container{
