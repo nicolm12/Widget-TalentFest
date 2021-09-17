@@ -15,11 +15,9 @@ const Form = (props) => {
 
   const selectChange = (e) => props.setOptionSearchNote(e.target.value)
 
-
   const handleSubmit = e => {
     e.preventDefault();
   };
-
 
   return (
     <div className={stylesComponents.container}>

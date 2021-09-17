@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import { Fragment } from 'react';
 import { MostrarLogin } from './components/ViewRegister'
+import { Login } from './components/formLogin';
 
 
 
@@ -32,6 +33,7 @@ function App() {
               </Route>
               <Route path="/formulario">
               <MostrarLogin />
+              <Login></Login>
               </Route>
               <Route path="/dashboard">
                 <Dashboard />
